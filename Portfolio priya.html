@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #54428e(210, 18%, 85%);
+      font-style: italic;
+      margin: 0;
+      color:  #383d47;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .profile-section {
+      display: flex;
+      align-items: center;
+      background: rgb(198, 89, 183);
+      border-color: #030b1c;
+      border-radius: 20px;
+      box-shadow: 0 4px 18px #23448518;
+      padding: 32px 24px;
+      gap: 50px;
+      margin-bottom: 36px;
+    }
+    .profile-pic {
+      width: 135px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #e3eafd;
+      box-shadow: 0 2px 12px #23448530;
+    }
+    .profile-info h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.1rem;
+      color: #060c17;
+      letter-spacing: 2px;
+    }
+    .profile-info p {
+      margin: 0 0 12px 0;
+      font-size: 1.08rem;
+      color: #354a70;
+      opacity: 0.93;
+    }
+    nav {
+      background: #6057b0;
+      text-align: right;
+      padding: 12px 0;
+      font-style: bold;
+      margin-bottom: 32px;
+      border-radius: 8px;
+      box-shadow: 5 2px 8px #23448510;
+    }
+    nav a {
+      color: #dbd6d9;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 1.08rem;
+      font-style: italic;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #ce2ca5;
+    }
+    section {
+      background: #e8d8f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px #23448510;
+      padding: 26px 20px;
+      margin-bottom: 32px;
+      transition: box-shadow 0.3s;
+    }
+    section:hover {
+      box-shadow: 0 4px 20px #23448522;
+    }
+    h2 {
+      margin-top: 0;
+      color: #234485;
+      font-size: 1.3rem;
+    }
+    .projects {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+    .project-card {
+      background: #c47dbd97;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 1px 6px #23448514;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 3px 12px #23448534;
+    }
+    .project-card h3 {
+      margin-top: 0;
+      font-style: oblique;
+      margin-bottom: 8px;
+      color: #0a1122;
+      font-size: 1.09rem;
+    }
+    .project-card p {
+      margin: 0 0 10px 0;
+      font-size: 0.97rem;
+    }
+    .project-card a {
+      color: #234485;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .skills-list li {
+      background: #c571aa;
+      color: #0a1f47;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-style: inherit;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-form label {
+      display: flex;
+      margin-bottom: 2px;
+      font-weight: 500;
+      color: #111927;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #bad6f7;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border: 1.5px solid #030b1c;
+    }
+    .contact-form button {
+      background: #3e9454;
+      color: #d9cfcf;
+      border: 5px;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #132c54;
+    }
+    .success-message {
+      color: #27ae60;
+      font-weight: 500;
+      display: none;
+      margin-top: 10px;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .profile-section { flex-direction: column; text-align: center; }
+      .profile-pic { margin-bottom: 18px; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 6px; }
+      section { padding: 14px 6px; }
+      .profile-section { padding: 18px 6px; }
+    }
+  </style>
+</head>
+ <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+<body>
+  <div class="container">
+    <div class="profile-section">
+       <img src="https://github.com/priya09042007/portfolios/blob/main/image%20(2).jpg?raw=true" alt="Profile Picture" class="profile-pic" id="profilePic">
+      <div class="profile-info">
+        <h1>PRIYA DHARSHINI &#10084;&#65039;</h1>
+        <p1>ARTIST | CALLIGRAPHER | STUDENT</p1>
+        <p></p>
+      </div>
+    </div>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+      I am a passionate artist with a deep love for creativity and self-expression. Each artwork is a reflection of my experiences, emotions, and imagination, inviting viewers to connect and interpret their own meanings. .<br>
+      Let's journey together through the vibrant world of art!...
+      </p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Fabric Painting</h3>
+          <p>“With each brush on fabric, creativity weaves itself into wearable art.”</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>3D Painting</h3>
+          <p>"3D painting brings imagination to life, allowing colors and textures to leap from the canvas and invite us into new worlds of depth and wonder."</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Lippan Art</h3>
+          <p>"With every swirl of clay and every glint of mirror, Lippan art brings walls to life with heritage and heart."</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+         <div class="project-card">
+          <h3>Bottle art</h3>
+          <p>"Bottle art is the magic of transforming everyday glass into a canvas, where creativity breathes new life and every curve tells a unique story."</h3>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+         <div class="project-card">
+          <h3>Flower craft</h3>
+          <p>"Flower crafting turns simple materials into blossoms of happiness and color."</h3>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>CREATIVITY AND IMAGINATION</li>
+        <li>SELF-EXPRESSION</li>
+        <li>PROBLEM SOLVING</li>
+        <li>HAND-EYE COORDINATION</li>
+        <li>SOCIAL SKILLS</li>
+        <li>CRITICAL THINKING</li>
+        <li>RESPONSIBLE DESIGNS</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-form" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+        <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
+      </form>
+    </section>
+  </div>
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 18,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Simple contact form validation and message
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 3000);
+    });
+
+    // Optional: Change profile picture on click (fun interaction)
+    
+  </script>
+</body>
+</html><footer style="background: #234485; color: #fff; text-align: center; padding: 24px 0 18px 0; border-radius: 0 0 18px 18px; margin-top: 36px; box-shadow: 0 -2px 10px #23448518; font-size: 1rem;">
+  <div>
+    copyright &copy; 2025 Priya Dharshini, Portfolio Website.
+   <p1> Crafted with love and code.<br></p1>
+    <span style="font-size:0.97rem; color:#e3eafd;">
+      Connect with us &#10084;&#65039;
+      <a href="mailto:priyabalaji7871@email.com" style="color:#a3b2c0;text-decoration:none;margin:0 8px;">Email</a> |
+      <a href="https://instagram.com/yourusername" target="_blank" style="color:#b9b6a8;text-decoration:none;margin:0 8px;">Instagram</a> |
+      <a href="tel:+91 6383649266" style="color:#c1c1af;text-decoration:none;margin:0 8px;">Phone</a> |
+       <a href="mailto:priyabalaji7871@email.com" style="color:#c2c0b4;text-decoration:none;margin:0 8px;">LinkedIn</a> 
+    </span>
+  </div>
+</footer>
